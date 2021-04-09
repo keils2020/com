@@ -1,0 +1,21 @@
+ngrok内网穿透+vray
+
+gitclone action linux
+1、下载ngrok
+curl -O https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+
+2、解压
+unzip ngrok-stable-linux-amd64.zip
+
+3、设置token
+./ngrok authtoken 1pYQrVB7hIUaWB1HRgLSN9l0QZ2_2fSX84u5p2Er8mmTZcvfF
+
+4、安装vray
+bash <(curl -sL https://s.hijk.art/v2ray.sh)
+选择1，设置端口号，如9000，这里端口号用监听，ngrok也要映射这个端口
+一路默认后，得到VMess信息
+
+5、启动
+./ngrok tcp 端口号，例如9000
+
+复制其中域名替换vray地址，端口替换端口即可
